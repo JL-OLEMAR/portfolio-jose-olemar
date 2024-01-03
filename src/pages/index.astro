@@ -1,0 +1,57 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Badge from '../components/Badge.astro'
+import SocialPill from '../components/SocialPill.astro'
+import LinkedInIcon from '../icons/LinkedIn.astro'
+import GithubIcon from '../icons/Github.astro'
+import MailIcon from '../icons/Mail.astro'
+---
+
+<Layout title='Welcome to Astro.'>
+	<main class='px-4'>
+		<section class='w-full mx-auto lg:w-[740px] py-44 pb-32'>
+			<img
+				class='rounded-full size-12 mb-4'
+				src='https://avatars.githubusercontent.com/u/71868068?v=4'
+				alt='jose olemar photo'
+			/>
+
+			<h1 class='flex flex-row gap-x-4 pb-10 text-white text-5xl font-bold'>
+				Hey, I'm José
+				<a
+					href='https://linkedin.com/in/jose-luis-olemar/'
+					target='_blank'
+					rel='noopener'
+					class='flex justify-center items-center'
+				>
+					<Badge>Available to work</Badge>
+				</a>
+			</h1>
+
+			<h2 class='max-w-[700px] text-xl lg:text-2xl text-balance'>
+				<span>+15 años de experiencia.</span>
+				<span class='text-yellow-200/80'
+					>Desarrollador Web y Creador de Contenido</span
+				>. <span class='text-red-200/90'>De Lima, Perú</span>. <span
+					class='opacity-75'>Especializado en crear aplicaciones únicas.</span
+				>
+			</h2>
+
+			<!-- Social Media -->
+			<nav class='flex flex-wrap gap-4 mt-8'>
+				<SocialPill href='https://linkedin.com/in/jose-luis'>
+					<LinkedInIcon class='size-4 md:size-6' />
+					LinkedIn
+				</SocialPill>
+				<SocialPill href='https://github.com/jl-olemar'>
+					<GithubIcon class='size-4 md:size-6' />
+					Github
+				</SocialPill>
+				<SocialPill href='mailto:joseluis19963@gmail.com'>
+					<MailIcon class='size-4 md:size-6' />
+					joseluis19963@gmail.com
+				</SocialPill>
+			</nav>
+		</section>
+	</main>
+</Layout>
