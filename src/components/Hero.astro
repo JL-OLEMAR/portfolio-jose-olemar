@@ -1,0 +1,59 @@
+---
+const NameAvatar = 'José Olemar'
+const SocialGithub = 'https://github.com/JL-OLEMAR/'
+const SocialMail = 'mailto:joseluis19963@gmail.com'
+const SocialLinkedin = 'https://linkedin.com/in/jose-luis-olemar/'
+
+import GithubIcon from '../icons/Github.astro'
+import LinkedInIcon from '../icons/LinkedIn.astro'
+import MailIcon from '../icons/Mail.astro'
+import Badge from './Badge.astro'
+import SocialPill from './SocialPill.astro'
+---
+
+<div class='max-w-xl'>
+	<div class='flex gap-4 mb-4 justify-center sm:justify-start'>
+		<img
+			class='rounded-full size-16 shadow-lg'
+			src='https://avatars.githubusercontent.com/u/71868068?v=4'
+			alt={`Avatar de ${NameAvatar}`}
+		/>
+		<a
+			href={SocialLinkedin}
+			target='_blank'
+			rel='noopener'
+			class='flex items-center transition md:justify-center md:hover:scale-105'
+		>
+			<Badge>Disponible para trabajar</Badge>
+		</a>
+	</div>
+
+	<h1
+		class='text-center sm:text-start text-4xl sm:text-5xl font-bold text-gray-800 dark:text-white tracking-tight'
+	>
+		Hola 👋, soy {NameAvatar}
+	</h1>
+	<p
+		class='mt-6 text-xl text-pretty [&>strong]:font-semibold text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 dark:text-gray-300'
+	>
+		<strong>Desarrollador Software</strong> especializado en el <strong
+			>Front-End</strong
+		> de Lima, Perú 🇵🇪. Me apasiona construir sitios y aplicaciones web 👨‍💻.
+	</p>
+
+	<!-- Social Media -->
+	<nav class='flex flex-wrap gap-4 mt-8 justify-center sm:justify-start'>
+		<SocialPill href={SocialMail}>
+			<MailIcon class='size-[18px]' />
+			Contáctame
+		</SocialPill>
+		<SocialPill href={SocialLinkedin}>
+			<LinkedInIcon class='size-[18px]' />
+			LinkedIn
+		</SocialPill>
+		<SocialPill href={SocialGithub}>
+			<GithubIcon class='size-[18px]' />
+			Github
+		</SocialPill>
+	</nav>
+</div>
